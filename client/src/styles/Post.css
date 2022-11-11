@@ -1,0 +1,17 @@
+.Post {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    border: 1px solid red;
+    /* background: rgba(255, 150, 100, 0.6); */
+}
+
+.Post div {
+    border: 1px solid black;
+}
+
+.Post p {
+    margin: 0;
+    padding: 0;
+}
+

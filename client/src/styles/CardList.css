@@ -1,0 +1,10 @@
+.CardList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.CardList--wrapper {
+    flex-basis: content;
+    margin: 1rem;
+}

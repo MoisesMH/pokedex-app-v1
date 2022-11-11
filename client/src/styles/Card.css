@@ -1,0 +1,73 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    /* border: 4px solid rgba(99, 10, 255, 1); */
+    border-radius: 0.5rem;
+    background: linear-gradient(.3turn, #eeaa2a, 60%, #efaf);
+    box-shadow: 2px 3px 12px 2px rgba(61, 46, 20, 0.6);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.Card:hover {
+    box-shadow: 2px 5px 20px 8px rgba(61, 16, 139, 1);
+    transform: translateY(-5px);
+}
+
+/* For spacing test */
+/* .Card div {
+    border: 1px solid black;
+} */
+
+.Card p {
+    margin: 0;
+    /* padding: 0; */
+}
+
+.Card__header {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+/* .Card__header::after {
+    content: '<hr>';
+} */
+
+.Card__header span {
+    display: flex;
+    margin: 0.5rem;
+    flex-grow: 1;
+    /* flex-basis: 20rem; */
+    aspect-ratio: 4/3;
+    justify-content: center;
+}
+
+.Card__header span img {
+    /* flex-grow: 1; */
+    object-fit: cover;
+}
+
+.Card__header--sep {
+    margin: 1rem;
+}
+
+.Card__body .Card__body--wrapper {
+    margin: 1rem;
+}
+
+.linea {
+    /* border: 1px solid black; */
+    margin-block: 0;
+    /* margin: 0; */
+    /* margin-inline: 1rem; */
+    border: none;
+    outline: none;
+    height: 1px;
+    background-color: rgba(240, 32, 32, 0.568);
+    opacity: 0.5;
+    /* flex-basis: 1rem; */
+    text-decoration: none;
+}
