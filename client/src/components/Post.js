@@ -42,14 +42,10 @@ function Post() {
                         margin="1rem"
                     >
                         <Flex column>
-                            <Flex
-                                margin="1rem"
-                            >
+                            <Flex margin="1rem">
                                 <h1>Hola</h1>
                             </Flex>
-                            <Flex
-                                margin="1rem"
-                            >
+                            <Flex margin="1rem">
                                 <h1>Hola</h1>
                             </Flex>
                         </Flex>

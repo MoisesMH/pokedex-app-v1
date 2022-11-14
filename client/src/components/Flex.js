@@ -2,7 +2,13 @@ import styled from "@emotion/styled"
 import { mqFunc } from "./Breakpoints"
 
 export const Flex = styled.div(props => ({
-    display: 'flex',
+    display: props.display || 'flex',
+    position: props.position || 'relative',
+    top: props.top,
+    right: props.right,
+    bottom: props.bottom,
+    left: props.left,
+    cursor: props.pointer && 'pointer',
     flexDirection: ((props.column || props.screen) && 'column') || 
                     (props.screenReverse && 'row'),
     justifyContent: props.justify,
@@ -21,6 +27,9 @@ export const Flex = styled.div(props => ({
     // Flex properties
     flex: `${props.flexGrow || 0} ${props.flexShrink || 1} ${props.flexBasis || "auto"}`,
     flexWrap: props.wrap && 'wrap',
+    // Background and border
+    background: props.background,
+    border: props.border,
     // Width, height, maxWidth and maxHeight
     width: props.width,
     height: props.height,

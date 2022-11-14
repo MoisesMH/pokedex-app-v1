@@ -10,5 +10,9 @@ export const Frame = styled('span')(props => ({
     aspectRatio: props.aspectRatio,
     margin: props.margin,
     padding: props.padding,
-    justifyContent: props.justify
+    justifyContent: props.justify,
+    background: props.background,
+    border: props.border,
+    borderRadius: props.borderRadius,
+    fontSize: props.fontSize
 }))

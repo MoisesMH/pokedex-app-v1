@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Input = styled.input(props => ({
+export const InputField = styled.input(props => ({
     display: (
         (props.inline && 'inline') ||
         (props.block && 'block') ||
@@ -9,19 +9,19 @@ export const Input = styled.input(props => ({
         (props.inlineFlex || 'inline-flex') ||
         (props.contains && 'contains') ||
         (props.hide && 'none') ||
-        (props.display)
+        (props.display) || "flex"
     ),
     // Other properties
     // Background
-    background: props.background,
+    background: props.background || "skyblue",
     // Border properties
-    border: props.border,
-    borderRadius: props.borderRadius,
+    border: props.border || 'none',
+    borderRadius: props.borderRadius || '2px',
     color: props.color,
-    outline: props.outline || 'none',
+    outline: props.outline || "1px solid blue",
     // Font properties
     fontFamily: props.fontFamily,
-    fontSize: props.fontSize,
+    fontSize: props.fontSize || "clamp(1.1rem, 1.3vw, 1.3rem)",
     fontWeight: props.fontWeight,
     fontStretch: props.fontStretch,
     lineHeight: props.lineHeight,
@@ -37,7 +37,7 @@ export const Input = styled.input(props => ({
     maxWidth: props.maxWidth,
     minWidth: props.minWidth,
     // Margin
-    margin: props.margin,
+    margin: props.margin || '0.5rem',
     marginTop: props.marginTop,
     marginRight: props.marginRight,
     marginBottom: props.marginBottom,
@@ -49,7 +49,7 @@ export const Input = styled.input(props => ({
     marginInlineStart: props.marginInlineStart,
     marginInlineEnd: props.marginInlineEnd,
     // Padding
-    padding: props.padding,
+    padding: props.padding || '0.3rem',
     paddingTop: props.paddingTop,
     paddingRight: props.paddingRight,
     paddingBottom: props.paddingBottom,
@@ -59,5 +59,19 @@ export const Input = styled.input(props => ({
     paddingBlockEnd: props.paddingBlockEnd,
     paddingInline: props.paddingInline,
     paddingInlineStart: props.paddingInlineStart,
-    paddingInlineEnd: props.paddingInlineEnd
+    paddingInlineEnd: props.paddingInlineEnd,
+    transition: "all 0.2s ease-out",
+    // When hovered
+    [`&:focus`]: {
+        background: props.backgroundWhenFocus || "rgba(200,0,158,0.6)",
+        outline: props.outlineWhenHover || "1px solid rgba(0,0,200,0.8)",
+        boxShadow: props.boxShadowWhenHover ||
+                    "3px 3px 5px 2px rgba(43, 85, 19, 0.8)",
+        color: "lightgray"
+        
+    },
+    // [`&:blur`]: {
+    //     background: props.background || "skyblue",
+    //     outline: props.outline || "1px solid blue"
+    // }
 }))
